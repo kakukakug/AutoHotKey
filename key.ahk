@@ -19,12 +19,12 @@ vk1Csc079::
 send,{vkF3sc029}
 return
 
-;;;ひらがな/カタカナを無効化
-vkF2sc070::BS
+;;;英数（CapsLock）をCtrl
+vkF0sc03A::Ctrl
 return
 
-;;;英数（CapsLock）で記号挿入
-vkF0sc03A::
+;;;ひらがな/カタカナで記号挿入
+vkF2sc070::
     Input,InputChar,L2 T2 C,{Esc},ss,wt,wd,bs,tt,br,dd,cc,wc,rr,ll
     If ErrorLevel = Match
     {
