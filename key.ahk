@@ -19,13 +19,14 @@ vk1Csc079::
 send,{vkF3sc029}
 return
 
-;;;英数（CapsLock）をCtrl
+;;;英数（CapsLock）を
 vkF0sc03A::Ctrl
 return
 
+
 ;;;ひらがな/カタカナで記号挿入
 vkF2sc070::
-    Input,InputChar,L2 T2 C,{Esc},ss,wt,wd,bs,tt,br,dd,cc,wc,rr,ll
+    Input,InputChar,L2 T2 C,{Esc},ss,wt,wd,bs,tt,br,dd,cc,wc,rr,ll,e,k
     If ErrorLevel = Match
     {
         If InputChar = ss
@@ -48,5 +49,9 @@ vkF2sc070::
             Send,→
         If InputChar = ll
             Send,←
+        If InputChar = e
+            Send,{F10}
+        If InputChar = k
+            Send,{F7}
     }
     Return
